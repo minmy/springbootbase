@@ -40,6 +40,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.validation.ValidatorFactory;
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ import java.util.List;
  * @desc
  */
 @Configuration
-public class AppConfiguration extends WebMvcConfigurationSupport {
+public class AppConfiguration extends WebMvcConfigurerAdapter {
     private static final Logger LOG = LoggerFactory.getLogger(AppConfiguration.class);
     @Autowired
     private WebMvcProperties webMvcProperties;
